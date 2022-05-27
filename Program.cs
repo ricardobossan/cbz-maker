@@ -1,2 +1,25 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System.IO.Compression;
+
+//char dsc = Path.DirectorySeparatorChar;
+//string dir = $@"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}{dsc}Mangas{dsc}Vagabond";
+string dir = Directory.GetCurrentDirectory();
+
+IEnumerable<string> vols = Directory.EnumerateDirectories(dir);
+
+foreach (string path in vols)
+{
+  try
+  {
+    ZipFile.CreateFromDirectory(path, path + ".cbz");
+  }
+  catch
+  {
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("Failed to compress " + path);
+    Console.ResetColor();
+  }
+  Console.WriteLine(path + " Compressed successfully");
+}
+
+
+
