@@ -1,0 +1,5 @@
+# .editorconfig é um arquivo para definir regras gerais para a maior parte dos editores de texto.
+# Prefere-se `.editorconfig` ao `omnisharp.json`, que parece estar virando legado.
+[*.cs]
+indent_style = space
+indent_size = 2

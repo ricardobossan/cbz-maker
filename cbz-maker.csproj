@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <PublishSingleFile>true</PublishSingleFile>
     <TargetFramework>net6.0</TargetFramework>
+    <DebugType>portable</DebugType>
     <RootNamespace>cbz_maker</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
