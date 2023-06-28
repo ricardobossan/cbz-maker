@@ -8,17 +8,17 @@ IEnumerable<string> vols = Directory.EnumerateDirectories(dir);
 
 foreach (string path in vols)
 {
-    try
-    {
-        ZipFile.CreateFromDirectory(path, path + ".cbz");
-        Console.WriteLine(path + " Compressed successfully");
-    }
-    catch
-    {
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine("Failed to compress " + path);
-        Console.ResetColor();
-    }
+  try
+  {
+    ZipFile.CreateFromDirectory(path, path + ".cbz");
+    Console.WriteLine(path + " Compressed successfully");
+  }
+  catch
+  {
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("Failed to compress " + path);
+    Console.ResetColor();
+  }
 }
 
 
